@@ -22,6 +22,8 @@ migrate_working_dir/
 # VS Code which you may wish to be included in version control, so this line
 # is commented out by default.
 #.vscode/
+# Platform-specific settings — each environment manages its own
+.vscode/settings.json
 
 # Flutter/Dart/Pub related
 **/doc/api/
@@ -43,3 +45,11 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Flutter generated files
+**/flutter/generated_plugin_registrant.*
+**/flutter/generated_plugins.cmake
+**/Flutter/GeneratedPluginRegistrant.*
+
+# Claude Code
+.claude/
