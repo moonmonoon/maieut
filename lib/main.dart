@@ -1,7 +1,21 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:window_manager/window_manager.dart';
 import 'screens/chat_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  if (Platform.isWindows || Platform.isMacOS || Platform.isLinux) {
+    await windowManager.ensureInitialized();
+    const size = Size(390, 844);
+    await windowManager.setSize(size);
+    await windowManager.setMinimumSize(size);
+    await windowManager.setMaximumSize(size);
+    await windowManager.setResizable(false);
+    await windowManager.center();
+  }
+
   runApp(const MyApp());
 }
 

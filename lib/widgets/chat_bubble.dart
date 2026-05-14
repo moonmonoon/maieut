@@ -12,7 +12,7 @@ class ChatBubble extends StatelessWidget {
     final isUser = message.isUser;
 
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 3),
       child: Row(
         mainAxisAlignment:
             isUser ? MainAxisAlignment.end : MainAxisAlignment.start,
@@ -20,29 +20,29 @@ class ChatBubble extends StatelessWidget {
         children: [
           if (!isUser) ...[
             CircleAvatar(
-              radius: 16,
+              radius: 13,
               backgroundColor: colorScheme.primaryContainer,
               child: Icon(
                 Icons.smart_toy_outlined,
-                size: 18,
+                size: 14,
                 color: colorScheme.onPrimaryContainer,
               ),
             ),
-            const SizedBox(width: 8),
+            const SizedBox(width: 6),
           ],
           Flexible(
             child: Container(
               padding:
-                  const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+                  const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
               decoration: BoxDecoration(
                 color: isUser
                     ? colorScheme.primary
                     : colorScheme.surfaceContainerHighest,
                 borderRadius: BorderRadius.only(
-                  topLeft: const Radius.circular(20),
-                  topRight: const Radius.circular(20),
-                  bottomLeft: Radius.circular(isUser ? 20 : 4),
-                  bottomRight: Radius.circular(isUser ? 4 : 20),
+                  topLeft: const Radius.circular(16),
+                  topRight: const Radius.circular(16),
+                  bottomLeft: Radius.circular(isUser ? 16 : 4),
+                  bottomRight: Radius.circular(isUser ? 4 : 16),
                 ),
               ),
               child: Text(
@@ -51,20 +51,20 @@ class ChatBubble extends StatelessWidget {
                   color: isUser
                       ? colorScheme.onPrimary
                       : colorScheme.onSurfaceVariant,
-                  fontSize: 15,
+                  fontSize: 13,
                   height: 1.4,
                 ),
               ),
             ),
           ),
           if (isUser) ...[
-            const SizedBox(width: 8),
+            const SizedBox(width: 6),
             CircleAvatar(
-              radius: 16,
+              radius: 13,
               backgroundColor: colorScheme.secondaryContainer,
               child: Icon(
                 Icons.person_outline,
-                size: 18,
+                size: 14,
                 color: colorScheme.onSecondaryContainer,
               ),
             ),

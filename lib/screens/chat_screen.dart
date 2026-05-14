@@ -63,26 +63,26 @@ class _ChatScreenState extends State<ChatScreen> {
         title: Row(
           children: [
             CircleAvatar(
-              radius: 18,
+              radius: 15,
               backgroundColor: colorScheme.primaryContainer,
               child: Icon(
                 Icons.smart_toy_outlined,
-                size: 20,
+                size: 16,
                 color: colorScheme.onPrimaryContainer,
               ),
             ),
-            const SizedBox(width: 12),
+            const SizedBox(width: 10),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text(
                   'AI 어시스턴트',
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
                 ),
                 Text(
                   _isTyping ? '입력 중...' : '온라인',
                   style: TextStyle(
-                    fontSize: 12,
+                    fontSize: 11,
                     color: _isTyping
                         ? colorScheme.primary
                         : colorScheme.onSurfaceVariant,
@@ -127,23 +127,23 @@ class _ChatScreenState extends State<ChatScreen> {
         children: [
           Icon(
             Icons.chat_bubble_outline_rounded,
-            size: 64,
+            size: 48,
             color: colorScheme.outlineVariant,
           ),
-          const SizedBox(height: 16),
+          const SizedBox(height: 12),
           Text(
             '대화를 시작해보세요',
             style: TextStyle(
-              fontSize: 18,
+              fontSize: 15,
               fontWeight: FontWeight.w500,
               color: colorScheme.onSurfaceVariant,
             ),
           ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 6),
           Text(
             '아래 입력창에 메시지를 입력하세요',
             style: TextStyle(
-              fontSize: 14,
+              fontSize: 12,
               color: colorScheme.outline,
             ),
           ),
@@ -154,21 +154,21 @@ class _ChatScreenState extends State<ChatScreen> {
 
   Widget _buildTypingIndicator(ColorScheme colorScheme) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(16, 4, 16, 4),
+      padding: const EdgeInsets.fromLTRB(12, 3, 12, 3),
       child: Row(
         children: [
           CircleAvatar(
-            radius: 16,
+            radius: 13,
             backgroundColor: colorScheme.primaryContainer,
             child: Icon(
               Icons.smart_toy_outlined,
-              size: 18,
+              size: 14,
               color: colorScheme.onPrimaryContainer,
             ),
           ),
-          const SizedBox(width: 8),
+          const SizedBox(width: 6),
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
             decoration: BoxDecoration(
               color: colorScheme.surfaceContainerHighest,
               borderRadius: const BorderRadius.only(
@@ -231,8 +231,8 @@ class _TypingDotState extends State<_TypingDot>
         return Transform.translate(
           offset: Offset(0, _animation.value),
           child: Container(
-            width: 7,
-            height: 7,
+            width: 6,
+            height: 6,
             margin: const EdgeInsets.symmetric(horizontal: 2),
             decoration: BoxDecoration(
               color: Theme.of(context).colorScheme.onSurfaceVariant,

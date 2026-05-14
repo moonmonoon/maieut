@@ -53,7 +53,7 @@ class _ChatInputState extends State<ChatInput> {
     final colorScheme = Theme.of(context).colorScheme;
 
     return Container(
-      padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
+      padding: const EdgeInsets.fromLTRB(12, 6, 12, 12),
       decoration: BoxDecoration(
         color: colorScheme.surface,
         border: Border(
@@ -97,7 +97,7 @@ class _ChatInputState extends State<ChatInput> {
                   textInputAction: TextInputAction.send,
                   keyboardType: TextInputType.multiline,
                   onSubmitted: (_) => _send(),
-                  style: const TextStyle(fontSize: 15),
+                  style: const TextStyle(fontSize: 13),
                   decoration: InputDecoration(
                     hintText: '메시지를 입력하세요...',
                     hintStyle:
@@ -105,19 +105,19 @@ class _ChatInputState extends State<ChatInput> {
                     filled: true,
                     fillColor: colorScheme.surfaceContainerHighest,
                     contentPadding: const EdgeInsets.symmetric(
-                      horizontal: 16,
-                      vertical: 10,
+                      horizontal: 12,
+                      vertical: 8,
                     ),
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(24),
+                      borderRadius: BorderRadius.circular(20),
                       borderSide: BorderSide.none,
                     ),
                     enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(24),
+                      borderRadius: BorderRadius.circular(20),
                       borderSide: BorderSide.none,
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(24),
+                      borderRadius: BorderRadius.circular(20),
                       borderSide: BorderSide(
                         color: colorScheme.primary,
                         width: 1.5,
@@ -127,18 +127,18 @@ class _ChatInputState extends State<ChatInput> {
                 ),
               ),
             ),
-            const SizedBox(width: 8),
+            const SizedBox(width: 6),
             AnimatedContainer(
               duration: const Duration(milliseconds: 200),
               child: FilledButton(
                 onPressed: (_hasText && widget.enabled) ? _send : null,
                 style: FilledButton.styleFrom(
-                  minimumSize: const Size(48, 48),
-                  maximumSize: const Size(48, 48),
+                  minimumSize: const Size(38, 38),
+                  maximumSize: const Size(38, 38),
                   padding: EdgeInsets.zero,
                   shape: const CircleBorder(),
                 ),
-                child: const Icon(Icons.arrow_upward_rounded, size: 22),
+                child: const Icon(Icons.arrow_upward_rounded, size: 18),
               ),
             ),
           ],
